@@ -99,8 +99,8 @@
                     <i class="fas fa-hexagon text-cyan-400"></i>
                     <span class="absolute text-[8px] font-black tracking-widest uppercase">TH</span>
                 </div>
-                <h1 class="text-xl font-black italic tracking-tighter text-white">
-                    THINA <span class="text-cyan-400 uppercase">STORE</span>
+                <h1 class="text-xl font-black italic tracking-tighter text-white uppercase">
+                    THINA <span class="text-cyan-400">STORE</span>
                 </h1>
             </div>
 
@@ -178,7 +178,7 @@
 
     <!-- Floating WhatsApp -->
     <div class="fixed bottom-10 right-10 z-[90]">
-        <a href="https://wa.me/9478" target="_blank" class="relative flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full shadow-2xl hover:-translate-y-2 transition-all">
+        <a id="floatWA" href="https://wa.me/94785673989" target="_blank" class="relative flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full shadow-2xl hover:-translate-y-2 transition-all">
             <div class="absolute inset-0 bg-cyan-400 rounded-full blur-2xl opacity-40 animate-pulse"></div>
             <i class="fab fa-whatsapp text-3xl text-white"></i>
         </a>
@@ -194,9 +194,8 @@
         ];
 
         let cart = [];
-        const WHATSAPP_BASE = "https://wa.me/9478";
+        const WHATSAPP_BASE = "https://wa.me/94785673989";
 
-        // DOM Elements
         const grid = document.getElementById('productGrid');
         const cartSidebar = document.getElementById('cartSidebar');
         const cartItemsContainer = document.getElementById('cartItems');
@@ -275,7 +274,6 @@
             cartTotal.textContent = `${total.toLocaleString()} LKR`;
         }
 
-        // Event Listeners
         document.getElementById('cartBtn').onclick = () => cartSidebar.classList.add('active');
         document.getElementById('closeCart').onclick = () => cartSidebar.classList.remove('active');
         document.getElementById('cartOverlay').onclick = () => cartSidebar.classList.remove('active');
@@ -290,10 +288,9 @@
             window.open(`${WHATSAPP_BASE}?text=${message}`, '_blank');
         };
 
-        // Initial Render
         renderProducts();
     </script>
 </body>
 </html>
 
-```
+
